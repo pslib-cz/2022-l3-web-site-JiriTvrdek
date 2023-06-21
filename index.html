@@ -5,9 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <title>Tento webový projekt</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/hamburger.css">
+    <script src="./hamburger.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Chessnity | Homepage</title>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+              const swiper = new Swiper(".swiper", {
+  
+          loop: true,
+          speed: 600,
+          autoHeight: true,
+          effect: "slide", //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'cards'
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+          autoplay: {
+            delay: 2000,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            hideOnClick: true,
+          },
+  
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletElement: "a",
+            bulletClass: "swiper-pagination-bullet dot",
+          },
+  
+          scrollbar: {
+            el: null,
+            draggable: true
+          },
+
+          breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+
+          1020: {
+            slidesPerView: 3,
+          },
+
+          1500: {
+            slidesPerView: 4,
+          }
+        }
+        });
+  
+        document.querySelector("#next-slide").onclick = () => swiper.slideNext();
+      </script>
 </head>
 <body>
-    <h1>Zdravím pozemšťané</h1>    
+    <header class="header">
+        <div class="hamburger-row">
+            <a href="./index.html" class="header__odkaz--logo">
+                <img src="./img/SVG/LOGO.svg" alt="logo" class="header__odkaz--img">
+                <p class="header__odkaz--text">Chessnity</p>
+            </a>
+            <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <nav class="navbar hamburger-nav hamburger-zone">
+            <menu class="nav__pages">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./library.html">Openings library</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+            </menu>
+        </nav>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="introduction__introduction">
+                <h1 class="h1">Introduction</h1>
+                <span class="width-line"></span>
+                <p class="introduction__text introduction__line">If there’s something that unites you and us, it’s chess, we love it just like you. Our mission is to make chess accesible. We try to help you understand the importance of openings and their basics. We want to teach you how to use that knowledge to your advantage.</p>
+                <span class="width-line"></span>
+            </div>
+            <div class="introduction__blok">
+                <h3 class="introduction__h3">Learn chess openings <span class="green">online</span></h3>
+                <figure class="introduction__figure">
+                    <img class="introduction__img" src="./img/Openings/Vienna-game.png" alt="Vienna game">
+                    <figcaption class="introduction__img--popisek">Vienna game</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="blog">
+            <h2 class="h2">Our blog</h2>
+            <div class="blog__blok">
+                <div class="blog__user">
+                    <div class="user__head">
+                        <img class="user__image" src="./img/SVG/avatar1.svg" alt="Jerome Bell">
+                        <div class="user__kontakt">
+                            <p class="name">Jerome Bell</p>
+                            <a class="email" href="mailto://bell.jerome@chessnity.com">bell.jerome@chessnity.com</a>
+                        </div>
+                    </div>
+                    <p class="user__nadpis">Chess News Roundup: A Look into the Exciting World of Chess</p>
+                    <p class="user__text">Welcome to our latest chess news roundup! Chess, often referred to as the "game of kings," has been captivating minds for centuries. In this blog post, we will delve into some of the recent...</p>
+                </div>
+                <div class="blog__user">
+                    <div class="user__head">
+                        <img class="user__image" src="./img/SVG/avatar2.svg" alt="Jitender Fatimah">
+                        <div class="user__kontakt">
+                            <p class="name">Jitender Fatimah</p>
+                            <a class="email" href="mailto://fatimah.jitender@chessnity.com">fatimah.jitender@chessnity.com</a>
+                        </div>
+                    </div>
+                    <p class="user__nadpis">The Rise of Online Chess</p>
+                    <p class="user__text">In recent years, online chess has experienced a significant surge in popularity, thanks to platforms like Chess.com and lichess.org. The COVID-19 pandemic further accelerated this...</p>
+                </div>
+                <div class="blog__user">
+                    <div class="user__head">
+                        <img class="user__image" src="./img/SVG/avatar3.svg" alt="Kristin Watson">
+                        <div class="user__kontakt">
+                            <p class="name">Kristin Watson</p>
+                            <a class="email" href="mailto://watson.kristin@chessnity.com">watson.kristin@chessnity.com</a>
+                        </div>
+                    </div>
+                    <p class="user__nadpis">World Chess Championship 2023</p>
+                    <p class="user__text">Chess fans around the world are eagerly anticipating the next World Chess Championship, scheduled to take place in 2023. The reigning champion, Magnus Carlsen from Norway, will...</p>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <h2 class="h2">Partners</h2>
+            <span class="width-line"></span>
+            <div class="swiper">
+                <div class="slider__content swiper-wrapper">
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/FIDE.png" alt="Fide"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/chessly.png" alt="chessly"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/chess.com.png" alt="chess"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/lichess.jpg" alt="Lichess"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/sscr.png" alt="sscr"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="#"><img src="./img/Partners/CHESS24.png" alt="chess24"></a></figure>
+                </div>
+            </div>
+            <span class="width-line"></span>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__blok--name">
+            <a href="./index.html" class="footer__odkaz--logo">
+                <img src="./img/SVG/LOGO.svg" alt="logo" class="footer__odkaz--img">
+                <p class="footer__odkaz--text">Chessnity</p>
+            </a>
+            <span class="width-line"></span>
+            <a class="footer__email" href="mailto://jirtvrd019@pslib.cz">Email: jirtvrd019@pslib.cz</a>
+        </div>
+        <div class="footer__blok">
+            <span class="high-line desktop-line"></span>
+            <div class="footer__blok--menu">
+                <a class="footer__menu" href="./index.html">Homepage</a>
+                <a class="footer__menu" href="#">Contacts</a>
+            </div>
+            <span class="high-line"></span>
+            <div class="footer__blok--menu">
+                <a class="footer__menu" href="#">Cookies</a>
+                <a class="footer__menu" href="#">Terms of use</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

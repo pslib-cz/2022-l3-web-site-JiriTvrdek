@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/hamburger.css">
+    <script src="./hamburger.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lightgallery/css/lg-zoom.css">
+	<link rel="stylesheet" href="./lightgallery/css/lightgallery.css">
+	<link rel="stylesheet" href="./lightgallery/css/lg-thumbnail.css">
+	<link rel="stylesheet" href="./lightgallery/css/lg-autoplay.css">
+	<script src="./lightgallery/lightgallery.min.js"></script>
+	<script src="./lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script src="./lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="./lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
+    <title>Chessnity | Library</title>
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger-row">
+            <a href="./index.html" class="header__odkaz--logo">
+                <img src="./img/SVG/LOGO.svg" alt="logo" class="header__odkaz--img">
+                <p class="header__odkaz--text">Chessnity</p>
+            </a>
+            <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <span class="high-line desktop-line"></span>
+        <nav class="navbar hamburger-nav hamburger-zone">
+            <menu class="nav__pages">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./library.html">Openings library</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+            </menu>
+        </nav>
+    </header>
+    <main class="gallery">
+        <figure class="picture"><a class="picture__a" href="./img/Openings/French-defense.png"><img class="gallery__img" src="./img/Openings/French-defense.png" alt="French defense"></a><figcaption class="gallery__popisek">French defense</figcaption></figure>
+        <figure class="picture"><a class="picture__a" href="./img/Openings/Vienna-game.png"><img class="gallery__img" src="./img/Openings/Vienna-game.png" alt="Vienna game"></a><figcaption class="gallery__popisek">Vienna game</figcaption></figure>
+        <figure class="picture"><a class="picture__a" href="./img/Openings/English-opening.png"><img class="gallery__img" src="./img/Openings/English-opening.png" alt="English opening"></a><figcaption class="gallery__popisek">English opening</figcaption></figure>
+        <figure class="picture"><a class="picture__a" href="./img/Openings/Sicilian-defense.png"><img class="gallery__img" src="./img/Openings/Sicilian-defense.png" alt="Sicilian defense"></a><figcaption class="gallery__popisek">Sicilian defense</figcaption></figure>
+        <figure class="picture"><a class="picture__a" href="./img/Openings/Bishops-opening.png"><img class="gallery__img" src="./img/Openings/Bishops-opening.png" alt="Bishop's opening"></a><figcaption class="gallery__popisek">Bishop's opening</figcaption></figure>
+        <figure class="picture"><a class="picture__a" href="./img/Openings/Dutch-defense.png"><img class="gallery__img" src="./img/Openings/Dutch-defense.png" alt="Dutch defense"></a><figcaption class="gallery__popisek">Dutch defense</figcaption></figure>
+    </main>
+    <footer class="footer">
+        <div class="footer__blok--name">
+            <a href="./index.html" class="footer__odkaz--logo">
+                <img src="./img/SVG/LOGO.svg" alt="logo" class="footer__odkaz--img">
+                <p class="footer__odkaz--text">Chessnity</p>
+            </a>
+            <span class="width-line"></span>
+            <a class="footer__email" href="mailto://jirtvrd019@pslib.cz">Email: jirtvrd019@pslib.cz</a>
+        </div>
+        <div class="footer__blok">
+            <span class="high-line desktop-line"></span>
+            <div class="footer__blok--menu">
+                <a class="footer__menu" href="./index.html">Homepage</a>
+                <a class="footer__menu" href="#">Contacts</a>
+            </div>
+            <span class="high-line"></span>
+            <div class="footer__blok--menu">
+                <a class="footer__menu" href="#">Cookies</a>
+                <a class="footer__menu" href="#">Terms of use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lightGallery(
+            document.querySelector(".gallery"), {
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            speed: 1000,
+            slideShowAutoplay: true,
+            slideShowInterval: 2000,
+            selector: ".picture > a",
+        });
+    </script>
+</body>
+</html>
