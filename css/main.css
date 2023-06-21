@@ -386,5 +386,9 @@ figure{
 }
 
 .gallery__popisek{
-    font: italic;
+    font-style: italic;
+}
+
+.introduction__img--popisek{
+    font-style: italic;
 }
